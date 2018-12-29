@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name         = 'EaseUI'
+  spec.name         = 'EaseUILite_YC'
   spec.version      = '3.5.3'
   spec.license       = { :type => 'Copyright', :text => 'EaseMob Inc. 2017' }
   spec.summary      = 'EaseMob UI Kit'
@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'Foundation', 'UIKit'
   spec.libraries    = 'stdc++'
   spec.resource     = 'EaseUI/resources/EaseUIResource.bundle'
-  spec.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
-  spec.dependency 'MWPhotoBrowser_YC'
+  spec.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC', 'GCC_PREPROCESSOR_DEFINITIONS' => 'ENABLE_LITE=1'}
+  spec.dependency 'MWPhotoBrowser_YC'    
   spec.dependency 'MJRefresh', '~> 3.1.0'
-  spec.dependency 'Hyphenate', '~> 3.5.2'
+  spec.dependency 'HyphenateLite', '~> 3.5.2'
 end
